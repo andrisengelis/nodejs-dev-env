@@ -9,6 +9,8 @@ NodeJS Development Environment
 
 "Transpile": Babel,
 
+"Bundle": Webpack,
+
 "Tests": Mocha,
   - *.test.js
   - Tests are kept together with src file per feature
