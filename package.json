@@ -1,0 +1,39 @@
+{
+  "name": "nodejs-dev-env",
+  "version": "1.0.0",
+  "description": "NodeJS Development Environment",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "babel-node buildScripts/startMessage.js",
+    "start": "npm-run-all --parallel open:src",
+    "open:src": "babel-node buildScripts/srcServer.js",
+    "localtunnel": "lt --port 3000 --subdomain kunstwerk",
+    "security-check": "nsp check",
+    "share": "npm-run-all --parallel open:src localtunnel",
+    "test": "mocha \"src/**/*.test.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrisengelis/nodejs-dev-env.git"
+  },
+  "author": "Andris Engelis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrisengelis/nodejs-dev-env/issues"
+  },
+  "homepage": "https://github.com/andrisengelis/nodejs-dev-env#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "chai": "^4.0.2",
+    "chalk": "^1.1.3",
+    "express": "^4.15.3",
+    "localtunnel": "^1.8.3",
+    "mocha": "^3.4.2",
+    "npm-run-all": "^4.0.2",
+    "nsp": "^2.6.3",
+    "open": "0.0.5"
+  }
+}
