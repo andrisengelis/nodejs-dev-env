@@ -15,6 +15,6 @@ NodeJS Development Environment
 
 "Tests": Mocha,
   - *.test.js
-  - Tests are kept together with src file per feature
+  - Tests are kept alongside with src file per feature
 
 "Assert": Chai
